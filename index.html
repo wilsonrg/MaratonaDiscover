@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/style.css" />
+		<title>Dev. Finance$</title>
+	</head>
+
+	<body>
+		<header>
+			<img src="./assets/logo.svg" alt="Logo Dev Finance" />
+		</header>
+
+		<main class="container">
+			<section id="balance">
+				<h2 class="sr-only">Balanço</h2>
+
+				<div class="card">
+					<h3><span>Entradas</span>
+						<p><img src="./assets/income.svg" alt="Imagem de entradas"></p>
+					</h3>
+					<p id="incomeDisplay">R$ 5.000,00</p>
+				</div>
+				<div class="card">
+					<h3><span>Saídas</span>
+						<p><img src="./assets/expense.svg" alt="Imagem de saídas"></p>
+					</h3>
+					<p id="expenseDisplay">R$ 2.000,00</p>
+				</div>
+				<div class="card total">
+					<h3><span>Total</span>
+						<p><img src="./assets/total.svg" alt="Imagem de toais"></p>
+					</h3>
+					<p id="totalDisplay">R$ 3.000,00</p>
+				</div>
+			</section>
+			<section id="transaction">
+				<h2 class="sr-only">Transações</h2>
+				<a href="javascript:void(0);" class="button new">+ Nova Transação</a>
+				<table id="data-table">
+					<thead>
+						<tr>
+							<th>Descrição</th>
+							<th>Valor</th>
+							<th>valor</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody></tbody>
+				</table>
+			</section>
+		</main>
+
+		<div class="modal-overlay">
+			<div class="modal">
+				<div id="form">
+					<h2>Nova Transação</h2>
+					<form action="" onsubmit="Form.submit(event)">
+						<div class="input-group">
+							<label for="description" class="sr-only">Descrição</label>
+							<input type="text" placeholder="Descrição" id="description" name="description" />
+						</div>
+						<div class="input-group">
+							<label for="amount" class="sr-only">Valor</label>
+							<input type="number" step="0.1" placeholder="0,00" id="amount" name="amount" />
+						</div>
+						<small>
+							Utilize os sinais:<br>
+							<blockquote>"-" (negativo)</blockquote> para despesas e <blockquote>"," (vírgula)
+							</blockquote> para casas
+							decimais
+						</small>
+						<div class="input-group">
+							<label for="date" class="sr-only">Data</label>
+							<input type="date" id="date" name="date" />
+						</div>
+						<div class="input-group actions">
+							<a href="javascript:void(0);" class="button cancel">Cancelar</a>
+							<button type="submit">Salvar</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<p class="footer">2021 - dev.finance$</p>
+		</footer>
+
+		<script src="./js/main.js"></script>
+	</body>
+
+</html>
